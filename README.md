@@ -1,1 +1,1 @@
-# LeetCode-CPP
+# LeetCode
