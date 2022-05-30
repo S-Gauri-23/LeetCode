@@ -2,12 +2,12 @@ class Solution {
 public:
     
     bool isPowerOfTwo(int n) {
-        //return false if the number is zero
-        if(n == 0)
-            return false;
+       if(n == 0)
+           return false;
+        while(n % 2 == 0)
+            n /= 2;
         
-        //return true if number is 1 or divide the n by 2 and call it recursively
-        return ((n==1) || (n % 2 == 0 && isPowerOfTwo(n/2)));
-            
+        return (n == 1);
+       
     }
 };
