@@ -22,7 +22,11 @@ class Solution{
         
         //moving n-1 discs from rod 1 to rod 2
         solve(N-1, from, aux, to, count);
+        
+        //moving last disc from rod 1 to rod 3
         cout<<"move disk "<<N<<" from rod "<<from<<" to rod "<<to<<endl;
+        
+        //moving n-1 discs from rod 2 to rod 3
         solve(N-1, aux, to, from, count);
     }
     
