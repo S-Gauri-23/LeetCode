@@ -10,7 +10,7 @@ public:
         }
         
         
-        if(isalpha(ip[0]))
+        if(ip[0] >= 'A' && ip[0] <= 'Z' || ip[0] >= 'a' && ip[0] <= 'z')
         {
             string op1 = op;
             string op2 = op;
@@ -23,7 +23,7 @@ public:
             solve(ip, op2);
         }
         
-        else if(isdigit(ip[0]))
+        else if(ip[0] >= '0' && ip[0] <= '9')
         {
             
             op.push_back(ip[0]);
