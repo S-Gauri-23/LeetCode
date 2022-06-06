@@ -7,12 +7,12 @@ using namespace std;
 class Solution{
 public:
     vector<string> res;
-    
     void solve(string ip, string op){
         if(ip.length() == 0){
             res.push_back(op);
             return;
         }
+        
         string op1 = op;
         string op2 = op;
         
@@ -25,14 +25,15 @@ public:
         solve(ip, op2);
     }
     
-    vector<string> permutation(string ip){
+    
+    vector<string> permutation(string S){
         // Code Here
-        
-        string op = "";
-        op.push_back(ip[0]);
-        ip.erase(ip.begin()+0);
-        solve(ip, op);
-        return res;
+       string ip = S;
+       string op = "";
+       op.push_back(ip[0]);
+       ip.erase(ip.begin()+0);
+       solve(ip, op);
+       return res;
     }
 };
 
