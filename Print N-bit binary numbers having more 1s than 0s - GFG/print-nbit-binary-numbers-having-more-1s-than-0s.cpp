@@ -7,8 +7,8 @@ using namespace std;
 //User function template for C++
 class Solution{
 public:	
-
-    void solve(int N, int zero, int one, vector<string> &s, string op){
+    vector<string> s;
+    void solve(int N, int zero, int one, string op){
         if(N == 0){
             s.push_back(op);
             return;
@@ -16,13 +16,13 @@ public:
         
         string op1 = op;
         op1.push_back('1');
-        solve(N-1, zero, one+1, s, op1);
+        solve(N-1, zero, one+1, op1);
         
         
         if(one > zero){
             string op2 = op;
             op2.push_back('0');
-            solve(N-1, zero+1, one, s, op2);
+            solve(N-1, zero+1, one, op2);
         }
         
     }
@@ -30,11 +30,11 @@ public:
 	vector<string> NBitBinary(int N)
 	{
 	    // Your code goes here
-	    vector<string> s;
+	    
 	    int zero = 0;
 	    int one  = 0;
 	    string op = "";
-	    solve(N, zero, one, s, op);
+	    solve(N, zero, one, op);
 	    return s;
 	}
 };
