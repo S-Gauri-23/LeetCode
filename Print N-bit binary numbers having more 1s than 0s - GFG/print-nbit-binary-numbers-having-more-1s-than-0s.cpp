@@ -14,6 +14,7 @@ public:
             return;
         }
         
+        
         string op1 = op;
         op1.push_back('1');
         solve(N-1, zero, one+1, op1);
