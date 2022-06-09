@@ -17,17 +17,3 @@ else if(num > numbers[mid]){
 l = mid + 1;
 }
 else{
-r = mid - 1;
-}
-}
-if(flag == 1){
-break;
-}
-}
-}
-vector<int> twoSum(vector<int>& numbers, int target) {
-vector<int> res;
-solve(numbers, target, res);
-return res;
-}
-};
