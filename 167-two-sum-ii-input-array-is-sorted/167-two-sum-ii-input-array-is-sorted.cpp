@@ -15,10 +15,11 @@ public:
                     
                     else
                     {
-                        sum = {x+1, mid+1};
+                        sum = { x+1, mid+1 };
                         return sum;
                     }
                 }
+                
                 else if(numbers[mid] < target - numbers[x])
                     low = mid + 1;
                 else
