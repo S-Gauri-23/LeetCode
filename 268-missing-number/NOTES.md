@@ -1,19 +1,10 @@
-class Solution {
-public:
-int missingNumber(vector<int>& nums) {
-int missingNumber(vector<int>& nums) {
-int n = nums.size(), ans = 0, i = 0;
 sort(nums.begin(), nums.end());
-while(i < n){
-if(i != nums[i]){
-ans = i;
-return ans;
+int n = nums.size();
+int i;
+for(i=0 ; i<=n ; i++){
+if(i == nums[i])
+continue;
+else
+break;
 }
-i++;
-}
-if(i == n){ans = i;}
-return ans;
-}
-}
-};
-​
+return i;
