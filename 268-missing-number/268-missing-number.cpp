@@ -6,7 +6,7 @@ public:
         
         int n = nums.size();
         
-        for(int i = 0; i < n; i++){
+        for(int i = 0; i < n; ++i){
             if(nums[i] != i)
                 return i;
         }
