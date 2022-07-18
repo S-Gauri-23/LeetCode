@@ -10,28 +10,20 @@
  */
 class Solution {
 public:
-    ListNode* middleNode(ListNode* head) {
-        ListNode* p = head;
-        int n=0;
-        while(p!=NULL){
-            n++;
-            p=p->next;
-        }
-        p=head;
-        if(n%2==0){
-            for(int i=1; i<=(n-1)/2; i++){
-                p = p->next;
-            }
-            p = p->next;
-        }
-        
-        else{
-            for(int i=1; i<=(n-1)/2; i++)
-            {
-                p = p->next;
-            }    
-        }
-        head = p;
-        return head;
-    }
+	ListNode* middleNode(ListNode* head) {
+    	int n = 0;
+    	ListNode* temp = head;
+    	while(temp) {
+        	n++;
+        		temp = temp->next;
+    	}
+   	 
+    	temp = head;
+   	 
+    	for(int i = 0; i < n / 2; i++) {
+        		temp = temp->next;
+    	}
+   	 
+    	return temp;
+	}
 };
