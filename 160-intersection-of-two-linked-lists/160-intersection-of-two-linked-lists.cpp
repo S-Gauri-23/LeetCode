@@ -16,8 +16,19 @@ public:
         ListNode * b = headB;
         
         while( a!=b ){
-            a = a == NULL ? headB : a->next;
-            b = b == NULL ? headA : b->next;
+            if(a == NULL){
+                a = headB;
+            }
+            else{
+                a = a->next;
+            }
+            
+            if(b == NULL){
+                b = headA;
+            }
+            else{
+                b = b->next;
+            }
         }
         return a;
     }
