@@ -18,7 +18,7 @@ public:
         
         while(curr->next != NULL){
             curr = curr->next;
-            ++len;
+            len++;
         }
         
         curr->next = head;
