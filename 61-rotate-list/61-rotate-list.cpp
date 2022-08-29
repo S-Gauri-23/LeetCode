@@ -25,11 +25,10 @@ public:
         k = k % len;
         k = len - k;
         
-        
-        // for(int i=0; i<k-1; i++){
-        //     curr = curr->next;
-        // }
-       while(k--) curr = curr->next;
+        for(int i=0; i<k; i++){
+            curr = curr->next;
+        }
+       // while(k--) curr = curr->next;
         head = curr->next;
         curr->next = NULL;
         
