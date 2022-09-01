@@ -7,13 +7,12 @@ public:
             if(nums[i] == 1){
                 count++;
                 
-                // if(count > maxOneCount)
-                //     maxOneCount = count;
+                if(count > maxOneCount)
+                    maxOneCount = count;
             }
             else
                 count = 0;
             
-            maxOneCount = max(maxOneCount, count);
         }
         return maxOneCount;
     }
