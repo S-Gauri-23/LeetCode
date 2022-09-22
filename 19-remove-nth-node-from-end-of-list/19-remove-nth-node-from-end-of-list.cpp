@@ -36,7 +36,7 @@ public:
         }
         
         
-        for(int i=1; i<=num-1; i++){
+        for(int i=0; i<num-1; i++){
             p = p->next;
         }
         p->next = p->next->next;
