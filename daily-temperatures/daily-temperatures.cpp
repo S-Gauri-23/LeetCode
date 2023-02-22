@@ -12,7 +12,7 @@ public:
                 res.push_back(0);
             }
             else{
-                while(!st.empty() && temperatures[st.top()] <= temperatures[i] ){
+                while(!st.empty() && temperatures[st.top()] <= temperatures[i]){
                     st.pop();
                 }
             
